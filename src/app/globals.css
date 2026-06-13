@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #FFF8F0;
+  --color-txt: #2D2D2D;
+  --color-accent: #E8789A;
+  --color-accent-light: #FFB4D2;
+  --color-accent-pale: #FFEDF4;
+  --color-sub: #666666;
+  --color-dim: #AAAAAA;
+  --color-card: #FFFFFF;
+  --color-border: #F0D0DC;
+  --color-ok: #4CAF82;
+  --color-ng: #E05C6A;
+  --color-mid: #F0A860;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-txt);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.fade-enter {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.fade-exit {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.choice-btn {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-card);
+  color: var(--color-txt);
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  cursor: pointer;
+  transition: border-color 0.18s, background 0.18s, transform 0.12s;
+  min-height: 56px;
+}
+
+.choice-btn:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-pale);
+  transform: translateY(-1px);
+}
+
+.choice-btn:active {
+  transform: translateY(0);
+}
