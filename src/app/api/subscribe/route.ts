@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { resultTypes, type ResultType } from "@/lib/results";
-import { mailMagazineIds } from "@/lib/reservestock";
+import { stepMailIds } from "@/lib/reservestock";
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
@@ -20,15 +20,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "server not configured" }, { status: 500 });
   }
 
-  const mailMagazineId = mailMagazineIds[type as ResultType];
+  const stepMailId = stepMailIds[type as ResultType];
 
   const params = new URLSearchParams();
-  params.set("mail_magazine_id", String(mailMagazineId));
+  params.set("step_mail_id", String(stepMailId));
   params.set("email_address", email);
   if (lastName) params.set("last_name", lastName);
   if (firstName) params.set("first_name", firstName);
 
-  const res = await fetch("https://www.reservestock.jp/api/subscribe_mail_magazine", {
+  const res = await fetch("https://www.reservestock.jp/api/subscribe_step_mail", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${apiKey}`,
