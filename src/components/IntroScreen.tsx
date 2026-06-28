@@ -6,25 +6,30 @@ type Props = {
 
 export default function IntroScreen({ onStart }: Props) {
   return (
-    <div className="flex flex-col items-center text-center px-6 py-10 max-w-md mx-auto">
-      <div className="text-6xl mb-4">🧴</div>
+    <div className="flex flex-col items-center text-center px-6 py-12 max-w-md mx-auto">
+      <p
+        className="text-xs mb-6"
+        style={{ color: "var(--color-dim)", letterSpacing: "0.08em" }}
+      >
+        skincare diagnosis
+      </p>
       <h1
-        className="text-2xl font-bold mb-2"
-        style={{ color: "var(--color-txt)" }}
+        className="text-3xl font-normal mb-3"
+        style={{ color: "var(--color-txt)", fontFamily: "var(--font-serif-jp)" }}
       >
         美肌診断
       </h1>
       <p
-        className="text-sm font-medium mb-6"
-        style={{ color: "var(--color-accent)" }}
+        className="text-sm mb-8"
+        style={{ color: "var(--color-sub)" }}
       >
         あなたのスキンケア習慣チェック
       </p>
       <div
-        className="w-full rounded-2xl p-5 mb-8 text-left"
-        style={{ background: "var(--color-accent-pale)", border: "1px solid var(--color-border)" }}
+        className="w-full rounded-2xl p-6 mb-8 text-left"
+        style={{ background: "var(--color-card)" }}
       >
-        <p className="text-sm leading-relaxed" style={{ color: "var(--color-sub)" }}>
+        <p className="text-sm leading-loose" style={{ color: "var(--color-txt)" }}>
           毎日のスキンケア、正しくできていますか？<br />
           10問の質問に答えて、あなたの美肌度を診断します。<br />
           <br />
@@ -33,9 +38,10 @@ export default function IntroScreen({ onStart }: Props) {
       </div>
       <button
         onClick={onStart}
-        className="w-full py-4 rounded-2xl text-white font-bold text-base tracking-wide transition-all duration-200 hover:opacity-90 active:scale-95"
+        className="w-full py-4 rounded-full text-base tracking-wide transition-opacity duration-200 hover:opacity-90 active:scale-95"
         style={{
-          background: "linear-gradient(135deg, var(--color-accent-light), var(--color-accent))",
+          background: "var(--color-accent)",
+          color: "var(--color-bg)",
           minHeight: "56px",
         }}
       >

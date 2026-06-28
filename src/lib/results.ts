@@ -24,8 +24,8 @@ export const results: Record<ResultType, Result> = {
       "紫外線対策も忘れずに",
       "睡眠と水分補給でさらに美肌を底上げ",
     ],
-    color: "#4CAF82",
-    bgColor: "#E8F5EE",
+    color: "#6E8B6B",
+    bgColor: "#F7F3EC",
   },
   candidate: {
     type: "candidate",
@@ -39,8 +39,8 @@ export const results: Record<ResultType, Result> = {
       "タオルは押し当てるだけにする",
       "お湯の温度を少し下げてみよう",
     ],
-    color: "#E8789A",
-    bgColor: "#FFEDF4",
+    color: "#A8717D",
+    bgColor: "#F7F3EC",
   },
   caution: {
     type: "caution",
@@ -54,8 +54,8 @@ export const results: Record<ResultType, Result> = {
       "化粧水は叩かず、ハンドプレスで入れよう",
       "クレンジングはこすらずになじませよう",
     ],
-    color: "#F0A860",
-    bgColor: "#FFF4E5",
+    color: "#B08D52",
+    bgColor: "#F7F3EC",
   },
   urgent: {
     type: "urgent",
@@ -69,8 +69,8 @@ export const results: Record<ResultType, Result> = {
       "洗顔はホイップ状の泡で優しく、タオルは押し当てるだけに",
       "化粧水はハンドプレスで5回以上重ね付けしよう",
     ],
-    color: "#E05C6A",
-    bgColor: "#FDEAEC",
+    color: "#A8645C",
+    bgColor: "#F7F3EC",
   },
 };
 
