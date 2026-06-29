@@ -47,9 +47,36 @@ export default function ResultScreen({ result, totalScore, onRetry }: Props) {
   }
 
   return (
-    <div className="flex flex-col items-center px-6 py-10 max-w-md mx-auto w-full">
+    <div className="max-w-md mx-auto w-full px-4 py-6">
+    <div
+      className="relative overflow-hidden rounded-3xl flex flex-col items-center px-6 py-10 w-full"
+      style={{ background: "var(--color-card)" }}
+    >
+      <div
+        className="absolute rounded-full pointer-events-none"
+        style={{
+          top: "-50px",
+          right: "-50px",
+          width: "150px",
+          height: "150px",
+          background: "var(--color-accent-light)",
+          opacity: 0.4,
+        }}
+      />
+      <div
+        className="absolute rounded-full pointer-events-none"
+        style={{
+          bottom: "60px",
+          left: "-40px",
+          width: "100px",
+          height: "100px",
+          background: "var(--color-accent-light)",
+          opacity: 0.3,
+        }}
+      />
+
       <p
-        className="text-xs mb-5 text-center"
+        className="relative text-xs mb-5 text-center"
         style={{ color: "var(--color-dim)", letterSpacing: "0.08em" }}
       >
         diagnosis result
@@ -57,7 +84,7 @@ export default function ResultScreen({ result, totalScore, onRetry }: Props) {
 
       <h2
         className="text-2xl font-normal mb-2 text-center"
-        style={{ color: result.color, fontFamily: "var(--font-serif-jp)" }}
+        style={{ color: result.color }}
       >
         {result.title}
       </h2>
@@ -100,7 +127,7 @@ export default function ResultScreen({ result, totalScore, onRetry }: Props) {
         </ul>
       </div>
 
-      <div className="w-full mb-8 rounded-2xl p-6" style={{ background: "var(--color-card)" }}>
+      <div className="relative w-full mb-8 rounded-2xl p-6" style={{ background: "var(--color-bg)" }}>
         {status === "success" ? (
           <p className="text-sm text-center leading-relaxed" style={{ color: "var(--color-sub)" }}>
             登録しました！あなたのタイプ向けのケア講座をメールでお届けします。
@@ -151,18 +178,19 @@ export default function ResultScreen({ result, totalScore, onRetry }: Props) {
       </div>
       <p
         className="text-xs text-center"
-        style={{ color: "var(--color-dim)", fontFamily: "var(--font-serif-jp)", letterSpacing: "0.08em" }}
+        style={{ color: "var(--color-dim)", letterSpacing: "0.08em" }}
       >
         清楚・清潔・すっぴん感
       </p>
 
       <button
         onClick={onRetry}
-        className="mt-6 text-sm underline underline-offset-2"
+        className="relative mt-6 text-sm underline underline-offset-2"
         style={{ color: "var(--color-dim)" }}
       >
         もう一度診断する
       </button>
+    </div>
     </div>
   );
 }

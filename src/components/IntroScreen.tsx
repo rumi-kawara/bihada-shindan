@@ -15,7 +15,7 @@ export default function IntroScreen({ onStart }: Props) {
       </p>
       <h1
         className="text-3xl font-normal mb-3"
-        style={{ color: "var(--color-txt)", fontFamily: "var(--font-serif-jp)" }}
+        style={{ color: "var(--color-txt)" }}
       >
         美肌診断
       </h1>
